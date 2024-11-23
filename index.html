@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    
+    <title>Frontend Mentor | Bento grid</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution { font-size: 11px; text-align: center; }
+      .attribution a { color: hsl(228, 45%, 44%); }
+
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+      }
+
+      body{
+        background-color: hsl(0, 0%, 95%);
+      }
+
+      .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 15px;
+      }
+
+      .first{
+        background-color: hsl(256, 67%, 59%);
+        height: auto;
+        padding: 15px;
+        text-align: center;
+        color: white;
+        font-family: DM Sans, sans-serif;
+      }
+
+      .second{
+        background-color: hsl(0, 0%, 100%);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+      }
+      
+
+      .third{
+        background-color:hsl(39, 100%, 71%) ;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 15px 0px 15px;
+      }
+      
+      .fourth{
+        background-color: hsl(254, 88%, 90%);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+        text-align: center;
+      }
+      
+      .fifth{
+        background-color: hsl(256, 67%, 59%);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 30px;
+        text-align: center;
+        color: white;
+      }
+      
+      .sixth{
+        background-color: hsl(0, 0%, 100%);
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+      }
+
+    
+      
+      .seventh{
+        background-color: hsl(31, 66%, 93%);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+      }
+      
+      .eigth{
+        background-color: hsl(39, 100%, 71%);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+      }
+
+            /* UTILITY CLASSES */
+      
+      .text-l{
+        font-family: DM sans,sans-serif;
+        font-size: 20px;
+        font-weight: 800;
+      }
+
+      .sub-container{
+        border-radius: 10px;
+        font-family: DM Sans, sans-serif;
+      }
+
+                  /* DESKTOP */
+      @media (min-width:800px) and (max-width:1400px) {
+        .container{
+          display:grid;
+          grid-template-rows:200px 100px 100px 190px;
+          grid-template-columns: 200px 200px 200px 200px;
+          justify-content: center;
+          padding: 5px;
+        }
+        
+                   /* FIRST */
+        .first{
+            grid-column: span 2 ;
+            order: 1;
+        }
+
+                  /* SECOND */
+        .second{
+            order: 4;
+            grid-row: span 2;
+        }
+        
+                 /* THIRD */
+        .third{
+            grid-row: span 2;
+            order: 5;
+        }
+        .third p{
+          font-size: 18px;
+        }
+
+        .third img{
+          width: 150px
+        }
+        
+                  /* FOURTH */
+        .fourth{
+          grid-row: span 3;
+          order: 3;
+        }
+        
+                /* FIFTH */
+        .fifth{
+             grid-column: span 2;
+             display: flex;
+             flex-direction: row;
+             order: 8;
+        }
+
+        .fifth img{
+          width: 100%;
+        }
+        
+                     /* SIXTH */
+        .sixth{
+            grid-row: span 2;
+            order: 7;
+        }
+
+        .sixth img{
+        width: 80%;
+        }
+        
+                /* SEVENTH */
+        .seventh{
+            /* order: 1; */
+            grid-row: span 2;
+            padding-top: 50px ;
+        }
+
+        .seventh img{
+          width: 100%;
+          padding-top: 20px;
+        }
+        
+                    /* EIGTH */
+        .eigth{
+             grid-row:span 2 ;
+             order: 6;
+             padding: 20px;
+        }
+        
+        .eigth p{
+          overflow: hidden;
+        }
+        .eigth img{
+          width: 100%;
+          padding-top: 30px;
+        }
+          
+      }
+
+    </style>
+  </head>
+  <body>
+    <main class="container">
+
+      <div class="first sub-container">
+        <h1 class="header">Social Media 10x Faster with AI</h1>
+        <img src="./assets/images/illustration-five-stars.webp" alt="five stars" width="150px">
+        <p class="text">Over 4,000 5-star reviews</p>
+      </div>
+
+      <div class="second sub-container">
+        <img src="./assets/images/illustration-multiple-platforms.webp" alt="multiple platforms" >
+        <p class="text-l">Manage multiple accounts and platforms.</p>
+      </div>
+
+      <div class="third sub-container">
+        <p class="text-l">Maintain a consistent posting schedule.</p>
+        <img src="./assets/images/illustration-consistent-schedule.webp" alt="schedule image" width="200px"  >
+      </div>
+      
+      <div class="fourth sub-container">
+        <p class="text-l">Schedule to social media.</p> 
+        <img src="./assets/images/illustration-schedule-posts.webp" alt="schedule image">
+        Optimize post timings to publish content at the perfect time for your audience.
+      </div>
+      
+      <div class="fifth sub-container">
+        <img src="./assets/images/illustration-grow-followers.webp" alt="grow followers image">
+        <p class="text-l">Grow followers with non-stop content.</p>
+      </div>
+      
+      <div class="sixth sub-container">
+        <p style="font-size: 50px;">>56%</p>
+        <p>faster audience growth</p>
+        <img src="./assets/images/illustration-audience-growth.webp" alt="audience growth image" width="50%">
+      </div>
+      
+      <div class="seventh sub-container">
+        <p class="text-l">Create and schedule content <span style="color: hsl(256, 67%, 59%);"> quicker.</span></p>
+        <img src="./assets/images/illustration-create-post.webp" alt="create post image" width="50%">
+      </div>
+      
+      <div class="eigth sub-container">
+        <p class="text-l">Write your content using AI.</p>
+        <img src="./assets/images/illustration-ai-content.webp" alt="ai content image" width="50%">
+      </div>
+
+    </main>
+
+
+                                            <!-- FOOTER -->
+    <footer>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+        Coded by <a href="#">Solomon</a>.
+      </div>
+    </footer>
+    
+  </body>
+</html>
